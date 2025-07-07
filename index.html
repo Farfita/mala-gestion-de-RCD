@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Mala Gestión de RCD</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <button id="toggle-theme">Cambiar tema</button>
+
+  <div id="control-panel">
+    <div class="slider-container">
+      <label for="slider1">Conocimiento norma (%) <span id="val1">0</span></label>
+      <input type="range" id="slider1" min="0" max="100" value="0">
+    </div>
+    <div class="slider-container">
+      <label for="slider2">Sanciones (%) <span id="val2">0</span></label>
+      <input type="range" id="slider2" min="0" max="100" value="0">
+    </div>
+    <div class="slider-container">
+      <label for="slider3">Acceso a programas (%) <span id="val3">0</span></label>
+      <input type="range" id="slider3" min="0" max="100" value="0">
+    </div>
+    <div class="slider-container">
+      <label for="slider4">Inspecciones por año <span id="val4">0</span></label>
+      <input type="range" id="slider4" min="0" max="500" value="0">
+    </div>
+
+    <button id="add-point">Agregar caso</button>
+    <button id="download">Descargar Excel</button>
+
+    <p><strong>Ecuación desarrollada:</strong></p>
+    <div id="ecuacion"></div>
+    <p><strong>Resultado:</strong> <span id="resultado">9.656</span></p>
+  </div>
+
+  <!-- LEYENDA -->
+  <div id="leyenda">
+    <p><strong>Escala de valoración del índice:</strong></p>
+    <div class="color-scale">
+      <div class="color-box bueno">≤ 3 — Bueno</div>
+      <div class="color-box aceptable">≤ 6 — Aceptable</div>
+      <div class="color-box regular">≤ 9 — Regular</div>
+      <div class="color-box malo">≤ 12 — Malo</div>
+      <div class="color-box muy-malo">> 12 — Muy malo</div>
+    </div>
+  </div>
+
+  <div id="plot"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

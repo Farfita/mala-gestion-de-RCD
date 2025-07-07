@@ -1,0 +1,119 @@
+:root {
+  --color-bueno: #28a745;
+  --color-aceptable: #a8c838;
+  --color-regular: #ffc107;
+  --color-malo: #e85d04;
+  --color-muy-malo: #8b0000;
+
+  --background-color: #f8f9fa;
+  --text-color: #222;
+  --card-background: #ffffff;
+}
+
+body.dark {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#toggle-theme {
+  margin-bottom: 20px;
+}
+
+#control-panel {
+  background: var(--card-background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#ecuacion {
+  background: #eef;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+#plot {
+  margin-top: 30px;
+}
+
+/* Leyenda */
+#leyenda {
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+.color-scale {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.color-box {
+  flex: 1;
+  padding: 8px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.color-box.bueno {
+  background-color: var(--color-bueno);
+}
+
+.color-box.aceptable {
+  background-color: var(--color-aceptable);
+  color: black;
+}
+
+.color-box.regular {
+  background-color: var(--color-regular);
+  color: black;
+}
+
+.color-box.malo {
+  background-color: var(--color-malo);
+}
+
+.color-box.muy-malo {
+  background-color: var(--color-muy-malo);
+}
